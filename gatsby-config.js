@@ -3,6 +3,7 @@ module.exports = {
     title: `Stephen Greer`,
     description: `Full Stack Web Engineer`,
     author: `@s_greer18`,
+    image: `/headshot.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

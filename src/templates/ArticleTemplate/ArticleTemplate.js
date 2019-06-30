@@ -9,7 +9,7 @@ import styles from "./ArticleTemplate.module.scss"
 
 const ArticleTemplate = ({ data }) => {
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, html, excerpt } = markdownRemark
 
   const article = useRef(null)
   const [percentScrolled, setPercentScrolled] = useState(0)
@@ -54,7 +54,11 @@ const ArticleTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title={frontmatter.title}/>
+      <Seo
+        title={frontmatter.title}
+        description={excerpt}
+        image={frontmatter.featuredImage.publicURL}
+      />
       <div ref={article}>
         <div className={styles.progressBarWrapper}>
           <div
@@ -91,11 +95,13 @@ export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      excerpt
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
         title
         featuredImage {
+          publicURL
           childImageSharp {
             fluid(quality: 90, maxWidth: 4160) {
               ...GatsbyImageSharpFluid_withWebp
@@ -108,7 +114,3 @@ export const pageQuery = graphql`
 `
 
 export default ArticleTemplate
-
-// fixed(width: 1600, height: 400, cropFocus: ENTROPY) {
-//   ...GatsbyImageSharpFixed
-// }
