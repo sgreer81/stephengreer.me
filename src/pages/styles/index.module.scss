@@ -1,0 +1,24 @@
+.container {
+  composes: container from global;
+}
+
+.index {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin: 0 -2rem;
+  }
+}
+
+.intro {
+  @media screen and (min-width: 768px) {
+    width: 25%;
+    margin: 0 2rem;
+  }
+}
+
+.blogRoll {
+  @media screen and (min-width: 768px) {
+    width: 75%;
+    margin: 0 2rem;
+  }
+}

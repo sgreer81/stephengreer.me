@@ -1,0 +1,61 @@
+.container {
+    composes: container from global;
+}
+
+.footer {
+    border-top: 0.2rem solid #dedede;
+    margin-top: 1.5rem;
+    padding-top: 3rem;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+}
+
+.content {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        margin: 0 -2rem 2rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+}
+
+.credits {
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+    }
+
+    a {
+        margin-right: 1rem;
+
+        svg {
+            &:hover {
+                transform: translateY(-0.2rem);
+            }
+        }
+    }
+
+    svg {
+        width: 2.5rem;
+        height: auto;
+        transition: transform 100ms;
+    }
+}
+
+.credits,
+.contact {
+    @media screen and (min-width: 768px) {
+        width: 50%;
+        padding: 0 2rem;
+    }
+}
+
+.copyright {
+    font-size: 0.8rem;
+}
