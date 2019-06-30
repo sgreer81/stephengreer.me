@@ -66,10 +66,25 @@
   }
 
   pre {
-    background-color: #f7f7f7;
-    padding: 0.3rem 1rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.6rem;
+    background-color: #383e44;
+    color: #fff;
     word-wrap: break-word;
     white-space: pre-wrap;
+
+    code {
+      padding: 0;
+      border-radius: 0;
+    }
+  }
+
+  code {
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #383e44;
+    color: #fff;
+    font-family: monospace;
   }
 
   .sanSerifFont {
