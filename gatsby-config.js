@@ -26,13 +26,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `stephen-greer`,
-        short_name: `stephen-greer`,
+        name: `Stephen Greer's Website`,
+        short_name: `Stephen Greer`,
         start_url: `/`,
         background_color: `#383e44`,
         theme_color: `#219cc1`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     {
