@@ -1,80 +1,80 @@
 .bio {
-    text-align: center;
-    margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
 
-    @media screen and (min-width: 768px) {
-        text-align: left;
-        margin-bottom: 1rem;
-    }
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
 
-    h1 {
-        letter-spacing: 0.1rem;
-        font-size: 1.4rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        margin-top: 1rem;
-    }
+  h1 {
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
 }
 
 .headshot {
-    border-radius: 100%;
-    max-width: 100%;
+  border-radius: 100%;
+  max-width: 100%;
 }
 
 .social {
-    font-size: 2rem;
+  font-size: 2rem;
 
-    a {
-        margin-right: 1rem;
-        color: #333;
+  a {
+    margin-right: 1rem;
+    color: #333;
 
-        svg {
-            transition: transform 100ms;
+    svg {
+      transition: transform 100ms;
 
-            &:hover {
-                transform: translateY(-0.2rem);
-            }
-        }
+      &:hover {
+        transform: translateY(-0.2rem);
+      }
     }
+  }
 }
 
 .horizontal {
-    border-top: 0.2rem solid #dedede;
-    margin-top: 3rem;
-    padding: 3rem 0 1rem;
+  border-top: 0.2rem solid #dedede;
+  margin-top: 3rem;
+  padding: 3rem 0 1rem;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    margin-top: 1.5rem;
 
     @media screen and (min-width: 768px) {
-        display: flex;
-        align-items: center;
-        font-size: 0.8rem;
+      margin-top: 0;
     }
+  }
 
-    h3 {
-        font-size: 1.4rem;
-        margin-bottom: 0.4rem;
-        margin-top: 1.5rem;
+  p {
+    margin-bottom: 0.4rem;
+  }
 
-        @media screen and (min-width: 768px) {
-            margin-top: 0;
-        }
+  .headshotWrapper {
+    @media screen and (min-width: 768px) {
+      width: 30%;
+      margin-right: 1.5rem;
     }
+  }
 
-    p {
-        margin-bottom: 0.4rem;
+  .social {
+    font-size: 1.4rem;
+
+    a {
+      margin-right: 0.6rem;
     }
-
-    .headshotWrapper {
-        @media screen and (min-width: 768px) {
-            width: 30%;
-            margin-right: 1.5rem;
-        }
-    }
-
-    .social {
-        font-size: 1.4rem;
-
-        a {
-            margin-right: 0.6rem;
-        }
-    }
+  }
 }

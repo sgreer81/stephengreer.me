@@ -18,7 +18,7 @@
 .titleBg {
   height: 20rem;
   filter: blur(10px);
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
 .titleCard {
@@ -29,7 +29,6 @@
   background-color: #fff;
   box-sizing: border-box;
   text-align: center;
-
 
   @media screen and (min-width: 45rem) {
     margin: -5rem auto 0;

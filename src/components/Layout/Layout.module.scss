@@ -1,91 +1,91 @@
 :global {
-    :root {
-        font-size: 15px;
+  :root {
+    font-size: 15px;
 
-        @media screen and (min-width: 768px) {
-            font-size: 17px;
-        }
+    @media screen and (min-width: 768px) {
+      font-size: 17px;
     }
+  }
 
-    body {
-        margin: 0;
-        font-family: 'Noto Serif', serif;
-        line-height: 1.8;
-        color: #333;
+  body {
+    margin: 0;
+    font-family: "Noto Serif", serif;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+  }
+
+  p {
+    margin: 0 0 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #219cc1;
+    transition: all 100ms;
+
+    &:hover {
+      color: #16416d;
     }
+  }
 
-    h1 {
-        font-size: 2rem;
-    }
+  pre {
+    background-color: #f7f7f7;
+    padding: 0.3rem 1rem;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+  }
 
-    h2 {
-        font-size: 1.8rem;
-    }
+  .sanSerifFont {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+  }
 
-    h3 {
-        font-size: 1.6rem;
-    }
+  .serifFont {
+    font-family: "Noto Serif", serif;
+    line-height: 1.6;
+  }
 
-    h4 {
-        font-size: 1.4rem;
-    }
-
-    h5 {
-        font-size: 1.2rem;
-    }
-
-    h6 {
-        font-size: 1rem;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 700;
-        line-height: 1.2;
-        margin: 0 0 1rem;
-    }
-
-    p {
-        margin: 0 0 1rem;
-    }
-
-    a {
-        text-decoration: none;
-        color: #219cc1;
-        transition: all 100ms;
-
-        &:hover {
-            color: #16416d;
-        }
-    }
-
-    pre {
-        background-color: #f7f7f7;
-        padding: 0.3rem 1rem;
-        word-wrap: break-word;
-        white-space: pre-wrap;
-    }
-
-    .sanSerifFont {
-        font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 700;
-    }
-
-    .serifFont {
-        font-family: 'Noto Serif', serif;
-        line-height: 1.6;
-    }
-
-    .container {
-        max-width: 65rem;
-        padding: 1.5rem;
-        margin: 0 auto;
-    }
+  .container {
+    max-width: 65rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
 }
