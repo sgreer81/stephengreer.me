@@ -48,7 +48,7 @@
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: 700;
     line-height: 1.2;
-    margin: 0 0 1rem;
+    margin: 1rem 0;
   }
 
   p {
@@ -65,13 +65,14 @@
     }
   }
 
+  .gatsby-highlight {
+    pre {
+      font-size: 0.9rem;
+    }
+  }
+
   pre {
-    padding: 0.6rem 1.5rem;
-    border-radius: 0.6rem;
-    background-color: #383e44;
-    color: #fff;
-    word-wrap: break-word;
-    white-space: pre-wrap;
+    border-radius: 0.4rem;
 
     code {
       padding: 0;
@@ -79,7 +80,7 @@
     }
   }
 
-  code {
+  p > code.language-text {
     padding: 0.1rem 0.5rem;
     border-radius: 0.3rem;
     background-color: #383e44;

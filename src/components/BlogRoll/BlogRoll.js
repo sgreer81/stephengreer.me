@@ -21,6 +21,7 @@ const BlogRoll = () => {
                 }
               }
             }
+            tags
           }
         }
       }
@@ -38,6 +39,7 @@ const BlogRoll = () => {
           title={post.frontmatter.title}
           date={post.frontmatter.date}
           path={post.frontmatter.path}
+          tags={post.frontmatter.tags}
         />
       ))}
     </section>

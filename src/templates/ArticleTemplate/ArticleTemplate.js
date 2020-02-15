@@ -9,7 +9,7 @@ import styles from "./ArticleTemplate.module.scss"
 
 const ArticleTemplate = ({ data }) => {
   const { markdownRemark } = data
-  const { frontmatter, html, excerpt } = markdownRemark
+  const { frontmatter, html, excerpt, tags } = markdownRemark
 
   const article = useRef(null)
   const [percentScrolled, setPercentScrolled] = useState(0)
@@ -58,6 +58,7 @@ const ArticleTemplate = ({ data }) => {
         title={frontmatter.title}
         description={excerpt}
         image={frontmatter.featuredImage.publicURL}
+        keywords={frontmatter.tags}
       />
       <div ref={article}>
         <div className={styles.progressBarWrapper}>
@@ -76,7 +77,19 @@ const ArticleTemplate = ({ data }) => {
 
         <div className={styles.titleCard}>
           <h1 className={styles.title}>{frontmatter.title}</h1>
-          <time date={frontmatter.date}>{frontmatter.date}</time>
+          <time date={frontmatter.date} className={styles.time}>
+            {frontmatter.date}
+          </time>
+
+          {frontmatter.tags && (
+            <div className={styles.tags}>
+              {frontmatter.tags.split(",").map(tag => (
+                <span key={tag} className={styles.tag}>
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
         <div className={styles.post}>
           <div
@@ -108,6 +121,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        tags
       }
     }
   }

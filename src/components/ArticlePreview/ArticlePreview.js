@@ -6,7 +6,7 @@ import Link from "gatsby-link"
 
 import styles from "./ArticlePreview.module.scss"
 
-const ArticlePreview = ({ title, image, path, date }) => {
+const ArticlePreview = ({ title, image, path, date, tags }) => {
   const [hovered, setHovered] = useState(false)
 
   return (
@@ -27,6 +27,13 @@ const ArticlePreview = ({ title, image, path, date }) => {
         <time dateTime={date} className={styles.date}>
           {date}
         </time>
+
+        {tags &&
+          tags.split(",").map(tag => (
+            <span key={tag} className={styles.tag}>
+              #{tag}
+            </span>
+          ))}
       </div>
       <Link to={path}>
         <span className={styles.linkSpanner} />

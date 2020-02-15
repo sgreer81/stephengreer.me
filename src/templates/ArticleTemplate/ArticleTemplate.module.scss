@@ -43,7 +43,7 @@
 
 .content {
   a {
-    border-bottom: 3px solid #dedede;
+    border-bottom: 2px solid #dedede;
   }
 
   h2 {
@@ -72,4 +72,14 @@
     font-size: 1.2rem;
     text-align: center;
   }
+}
+
+.time {
+  margin: 1rem 0 0.25rem;
+  display: block;
+}
+
+.tag {
+  border-bottom: 2px solid #dedede;
+  margin: 0 0.5rem;
 }
