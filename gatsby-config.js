@@ -14,16 +14,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-sass`,
-    `gatsby-remark-copy-linked-files`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-remark-images`,
       options: {
         maxWidth: 1080,
       },
     },
+    `gatsby-plugin-sass`,
+    `gatsby-remark-copy-linked-files`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -43,7 +43,23 @@ module.exports = {
         path: `${__dirname}/src/blog`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {},
+          },
+        ],
+      },
+    },
     `gatsby-plugin-offline`,
   ],
 }

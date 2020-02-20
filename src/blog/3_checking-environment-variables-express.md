@@ -3,6 +3,7 @@ path: "/checking-environment-variables-express"
 date: "2019-06-30"
 title: "Checking Environment Variables in an Express App"
 featuredImage: "../images/stop-sign.jpg"
+tags: "node,express"
 ---
 
 Environment variables are a useful tool when running an application for both security and managing different environments. Using environments variables to keep secret keys out of version control is important for security. Or, your app my use a different database host on staging than production. Environments variables can help with this.
@@ -15,7 +16,7 @@ Using environments variables are great, but setting up these variables on a new 
 
 Install `express-env-check` as an application dependency.
 
-```
+```bash
 npm install --save express-env-check
 ```
 
