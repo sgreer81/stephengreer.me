@@ -160,11 +160,11 @@ Walk through the [wizard](https://zerossl.com/free-ssl/#crt) to create a new Let
 
 Copy the Certificate, CA Bundle and Private Key to files.
 
-![Zero SSL Certificate](/4-zero-ssl.jpg)
+![Zero SSL Certificate](../images/4-zero-ssl.jpg)
 
 Login to your VPN access server GUI using the user `openvpn` and created on the server. Navigate to Settings > Web Server. From there, upload the Certificate, CA Bundle and Private Key files. Click validate and save if there are no errors.
 
-![Upload SSL Certificate Screenshot](/4-upload-cert.jpg)
+![Upload SSL Certificate Screenshot](../images/4-upload-cert.jpg)
 
 ## Setup Users
 
@@ -174,4 +174,4 @@ Once the VPN is setup, users can be added from the admin section of your access 
 
 After creating a user account, users can download the OpenVPN client and connect to the VPN. This is made really easy if users are using a Mac (haven't tested on other devices) as they can download a pre-configured package with their access certificate. Navigate to the VPN URL in the browser and click the Apple logo to download. Once downloaded, run the `.pkg` file and it will setup the VPN client.
 
-![Download VPN Client](/4-download-vpn-client.jpg)
+![Download VPN Client](../images/4-download-vpn-client.jpg)
