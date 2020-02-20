@@ -6,7 +6,7 @@ featuredImage: "../images/default-article.jpg"
 tags: "devops,aws"
 ---
 
-Using a VPN server is a great way to directly connect to AWS resources like databases or EC2 instances deployed to private subnets. Bastion hosts have long been and industry practice for this purpose, but running a VPN server is a great alternative.
+Using a VPN server is a great way to directly connect to AWS resources like databases or EC2 instances deployed to private subnets. Bastion hosts have long been an industry practice for this purpose, but running a VPN server is a great alternative.
 
 This article will walk through deploying an [OpenVPN](https://openvpn.net/amazon-cloud/) host on an EC2 instance using Terraform. This assumes you have an existing VPC created with both public and private subnets.
 
@@ -18,7 +18,7 @@ This article will walk through deploying an [OpenVPN](https://openvpn.net/amazon
 
 ## Create EC2 Instance
 
-OpenVPN has two licencing models that will work with AWS, bring your own licence or use an OpenVPN AMI for a specific number of users 5, 10, etc. In this case, we will use the OpenVPN AMI, but the process for bringing your own licence is very similar.
+OpenVPN has two licencing models that will work with AWS: bring your own licence or use an OpenVPN AMI for a specific number of users (5, 10, etc.). In this case, we will use the OpenVPN AMI, but the process for bringing your own licence is very similar.
 
 Add the following to a `.tf` file. This assumes you already have a Terraform configuration established with an AWS provider.
 
@@ -43,7 +43,7 @@ variable "ami" {
 
 ### Create a new security group
 
-We need to put the VPN access server in security group with access rules. This will also be used to allow traffic from the VPN to access specific resources within your VPC.
+We need to put the VPN access server in a security group with access rules. This will also be used to allow traffic from the VPN to access specific resources within your VPC.
 
 You will notice that the security group allows access from the ports `tcp/22`, `tcp/943`, `tcp/443` and `udp/1194`. These are required to be open for the SSH access and for the VPN to function properly.
 
@@ -164,6 +164,14 @@ Copy the Certificate, CA Bundle and Private Key to files.
 
 Login to your VPN access server GUI using the user `openvpn` and created on the server. Navigate to Settings > Web Server. From there, upload the Certificate, CA Bundle and Private Key files. Click validate and save if there are no errors.
 
+![Upload SSL Certificate Screenshot](/4-upload-cert.jpg)
+
 ## Setup Users
 
+Once the VPN is setup, users can be added from the admin section of your access server. I would recommend enable MFA (supports Google Authenticator) and enabling auto-login.
+
 ## Download OpenVPN client to device
+
+After creating a user account, users can download the OpenVPN client and connect to the VPN. This is made really easy if users are using a Mac (haven't tested on other devices) as they can download a pre-configured package with their access certificate. Navigate to the VPN URL in the browser and click the Apple logo to download. Once downloaded, run the `.pkg` file and it will setup the VPN client.
+
+![Download VPN Client](/4-download-vpn-client.jpg)
